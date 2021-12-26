@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "ZenForces",
+  "description": "Disable Element of Ratings on Codeforces Page for Non Competitive Experience",
+  "version": "1.0.0",
+  "icons":  {	"16": "icon16.png",
+				"48": "icon48.png",
+				"128": "icon128.png"
+			},
+  "content_scripts":[
+	{
+		"matches" : ["https://codeforces.com/*"],
+		"run_at": "document_start",
+		"js":["content.js"]
+	},
+	{
+		"matches" : ["https://codeforces.com/*"],
+		"js":["main.js"]
+	}
+  ]
+}
